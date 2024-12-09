@@ -1,0 +1,30 @@
+
+                                                 Chapter 1
+                                     Opps, Class , Objects and Constructors
+
+* What is Object Oriented programming and what is the need of it?
+
+ Let's a step back , so there are 2 kind of programming languages 1. Object oriented programming languages , 2. Functional/Procedural programming langauages
+ Some object oriented programming languages are -> java, cpp , python .
+ Some functional programming langauages are -> C , Haskell
+
+ Languages like C came first , so what was the problem with it ? what did we need c++? which is basically C+opps+stl?
+
+ The C programming language is procedural and lacks built-in support for Object-Oriented Programming (OOP) principles like encapsulation, inheritance, and        polymorphism. While C is powerful and efficient, these limitations made it harder to manage and scale large, complex software systems. C++ was designed to     address these issues by introducing object-oriented features and bridging the gap between procedural and object-oriented programming.
+
+* What is opps?
+ 
+* Object-Oriented Programming (OOP) is a programming paradigm that organizes and structures code around objects rather than functions or logic. Objects represent real-world entities and are instances of classes, which define their properties and behaviors. OOP is designed to make code modular, reusable, and easier to manage.
+
+ Let me put in in a better way 
+
+ Suppose are making a databse for different types of cats , and you have to make it for 500 cats , now it is tedious task to fill name , age , color , breed etc 
+ It was take soo much time , but you know what ? every cat has a basic structure ? like age , colour , breed so what if you have template which you can just fill  and the cat details are made , in the first case you had to write "name" , "age" ,"breed" , etc multiple times but in the second case I have given you a from to  fill these details , now it must be easy you can ask for as many forms you want this would make the work faster and easier . That what object oriented programming does .
+
+ * What is Class? 
+  A class in object-oriented programming (OOP) is a blueprint or template for creating objects. It defines the properties (data members) and behaviors (methods or functions) that the objects created from it will have. A class is a user-defined data type, which can be used to represent real-world entities and their interactions in a program.
+
+  * What is the datatype of a class?
+  In C++, a class is not a primitive data type like int or char. Instead, a class defines a custom data type. When you define a class, you are essentially creating a new type that can be used to create objects.
+
+                             
