@@ -29,7 +29,9 @@ class Nation{
 int main()
 {
     Nation India("India" , 2 , 120 , "1.5B", 7);
-    std::cout<<"Population of India is "<<India.population;
+    std::cout<<"Population of India is "<<India.population; //public members are accessed by objects directly
+    
+
 
     return 0;
 }

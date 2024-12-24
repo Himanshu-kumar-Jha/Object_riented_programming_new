@@ -12,6 +12,7 @@ namespace Creatures{
 }
 
 // Playing with access modifiers and understanding it different behaviours
+
 namespace SeaCreatures{
 
     class SeaLion{
@@ -47,11 +48,21 @@ int main()
     std:: cout<< "Is Doodle Healthy : " <<Doodle.healthy << std:: endl;
     std:: cout<< "What is Doodle's Weight : "<< Doodle.weightOfSeaLionInKg << " Kgs"<<std::endl;
 
-    Doodle.weightOfSeaLionInKg = 200; // changing a public data member by accessing it directly , doing same with location will throw error  because it can't be changed as it is a private member.
+    Doodle.weightOfSeaLionInKg = 200;  //changing a public data member by accessing it directly , doing same with location will throw error  because it can't be changed as it is a private member.
     std:: cout<< "What is Doodle's new weight ? : "<< Doodle.weightOfSeaLionInKg <<" kgs"<<std::endl;
     std:: cout<< "What is Doodle's Location ? : "<< Doodle.getSeaLionLocation() <<std::endl;   //using a getter to access the private member.
-    Doodle.changeSeaLionLocation("Antartica");    //using setter to change the private member
+    Doodle.changeSeaLionLocation("Antartica");    //using setter to change a private member.
     std::cout<<"What is the new location of seaLion "<<Doodle.getSeaLionLocation()<<std::endl;
+
+    /*************************************************************************************************************/
+    
+
+
+
+
+
+
+
 
 
 

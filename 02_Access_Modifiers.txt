@@ -1,0 +1,7 @@
+                                                       Access Modifiers in a class 
+                                                       
+Access modifiers in object-oriented programming define the level of access control for members (data and methods) of a class. They determine who can use or modify these members. 
+There are 3 kinds of access Modifiers:
+1. Public  ->  can be accessed from outside the class by object , and from anywhere as long as object of the class is present . 
+2. Private ->  Members are accessible only within the class itself. They cannot be accessed outside the class directly, not even by derived classes.
+3. Protected -> Members are accessible within the class itself and by derived (child) classes.They are not accessible directly by objects of the class.

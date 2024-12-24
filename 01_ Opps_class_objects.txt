@@ -1,5 +1,5 @@
 
-                                                 Chapter 1
+                                                   Chapter 1
                                      Opps, Class , Objects and Constructors
 
 * What is Object Oriented programming and what is the need of it?
@@ -27,4 +27,22 @@
   * What is the datatype of a class?
   In C++, a class is not a primitive data type like int or char. Instead, a class defines a custom data type. When you define a class, you are essentially creating a new type that can be used to create objects.
 
-                             
+  -> All variables in a class are called as data members and functions are called methods .
+  -> Size of object made from a class is the total size of it's data members is does not depend upon the methods 
+  -> If you craete an object with no data members it's size will be 1 .
+  -> By default all the data members are private , methods are also private.
+
+
+                                                        Access Modifiers in a class 
+Access modifiers in object-oriented programming define the level of access control for members (data and methods) of a class. They determine who can use or modify these members. 
+There are 3 kinds of access Modifiers:
+1. Public  ->  can be accessed from outside the class by object , and from anywhere as long as object of the class is present . 
+2. Private ->  Members are accessible only within the class itself. They cannot be accessed outside the class directly, not even by derived classes.
+3. Protected -> Members are accessible within the class itself and by derived (child) classes.They are not accessible directly by objects of the class.
+
+
+
+        
+    
+
+
