@@ -1,0 +1,19 @@
+Static and dynamic allocation of memory of objects 
+
+Dynamic allocation of memory for an object has several benefits:
+
+Flexibility:
+
+You can allocate memory at runtime based on the program's needs, which is useful when the size or number of objects is not known at compile time.
+
+Efficient Memory Usage:
+Memory is allocated only when needed and can be deallocated when no longer required, which can lead to more efficient use of memory.
+
+Lifetime Control:
+Dynamically allocated objects can have a lifetime that extends beyond the scope in which they were created. This is useful for objects that need to persist across multiple function calls or throughout the program's execution.
+
+Avoiding Stack Overflow:
+Large objects or a large number of objects can consume significant stack space, leading to stack overflow. Dynamic allocation uses the heap, which typically has more available memory than the stack.
+
+Polymorphism and Inheritance:
+Dynamic allocation is often used in conjunction with polymorphism and inheritance. For example, you can allocate memory for a base class pointer and assign it to a derived class object, enabling runtime polymorphism.
