@@ -1,0 +1,16 @@
+                                                       Constructors
+
+->They are invoked when object is created. 
+->They have no return type.
+->For now we will study Default and parametrised Constructors(user defined).
+->There can be n number of constructors in a class each with different parameters , this is called constructor overloading.
+->As soon as you write your own constructor the default constructor is which is inbuit is disabled.
+
+->significance of this keyword
+This keyword is a pointer which points to the current address of the object.
+
+
+//copy constructor
+copy constructor also exists by default as in built constructor , get called when object is copied .
+It as always passed by rerference , if passed by value copu constructor will me called gain as pass by value creates a copy of the object , which again calls copy constructor so the loop keeps runing , that's why it is important to make a copy constructor by rerference.
+
