@@ -1,0 +1,8 @@
+                                                  SHALLOW AND DEEP COPY 
+
+Shallow copy in cpp
+
+In C++, a shallow copy is created when an object is copied in such a way that the copied object still references the same memory as the original object. This typically occurs when the default copy constructor or assignment operator is used, as they perform member-wise copying. 
+
+The inbuilt copy constructor always performs a shallow copy of objects , to avoid this and to achive deep copy we can write our own copy constructor .
+
