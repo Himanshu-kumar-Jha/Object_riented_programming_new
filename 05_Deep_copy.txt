@@ -1,0 +1,62 @@
+                                                DEEP COPY 
+
+Deep Copy in C++
+What is Deep Copy?
+A deep copy creates an entirely new copy of an object, including allocating new memory for dynamically allocated resources. This ensures that each object has its own independent copy of the data, avoiding unintended shared memory issues.
+
+How is Deep Copy Different from Shallow Copy?
+Feature	Shallow Copy        (Default Copy Constructor)	                  Deep Copy (Custom Copy Constructor)
+Copies memory addresses?     	Yes (only copies pointers)	            No (allocates new memory)
+Data shared between objects?	   Yes                             	No
+Risk of double deletion?	Yes                                  	No
+Manages dynamic memory properly?	No	                            Yes
+
+
+
+1️⃣ What is the difference between a deep copy and a shallow copy?
+
+Shallow copy: Copies memory addresses (pointers), leading to shared memory.
+Deep copy: Allocates new memory and copies data, making objects independent.
+2️⃣ When does the default copy constructor cause problems?
+
+If a class has dynamic memory allocation, the default copy constructor copies only the pointer, leading to double deletion or dangling pointers.
+3️⃣ How do you implement a deep copy in C++?
+
+By defining a custom copy constructor that allocates new memory and copies the data manually.
+Intermediate Questions
+4️⃣ What happens if a class has a pointer member and you don’t define a deep copy constructor?
+
+Multiple objects will point to the same memory, causing undefined behavior when one object is deleted.
+5️⃣ How does std::unique_ptr prevent shallow copy issues?
+
+std::unique_ptr deletes the copy constructor, preventing accidental shallow copies.
+6️⃣ How do you disable copying in a class?
+
+class NoCopy {
+private:
+    NoCopy(const NoCopy&) = delete;
+    NoCopy& operator=(const NoCopy&) = delete;
+};
+This prevents accidental shallow copies.
+
+Advanced Questions
+
+7️⃣ What is the rule of three?
+
+If a class has dynamic memory, it should define:
+Destructor (to free memory)
+Copy constructor (for deep copy)
+Copy assignment operator (for deep copy assignment)
+8️⃣ What is the rule of five?
+
+Adds: 4. Move constructor (for moving resources) 5. Move assignment operator (for moving resources)
+9️⃣ How do you implement deep copy in a copy assignment operator?
+
+
+DeepCopy& operator=(const DeepCopy& other) {
+    if (this != &other) {
+        delete data;  // Free existing memory
+        data = new int(*(other.data));  // Allocate new memory and copy
+    }
+    return *this;
+}
