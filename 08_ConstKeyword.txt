@@ -1,0 +1,51 @@
+                                             CONST keyword
+
+The const keyword in C++ is used to define read-only variables, function parameters, return values, functions, and objects to prevent unintended modifications. As soon as you declare an object by const It makes all of the data member
+const by default. So you win't be ablr to change any data member.
+
+1. Using const wrt making objects 
+ -> to make a const object , all the variables of class must be inatilised , coz if they are not it will throw an error
+ -> the error it will throw is -> no default constructor.
+
+ Example 
+
+class Test {
+public:
+    int x;  // Member variable (not initialized)
+};
+
+const Test obj;  // ❌ ERROR! No default constructor
+
+This happend because :
+1. const obj means you cannot modify obj after creation.
+2. But x is not initialized when the object is created.
+3. Since x is uninitialized, it may hold garbage values, which contradicts the read-only nature of const.
+4. C++ does not allow a const object to have uninitialized members.
+
+// How to fix it?
+By explicitly initilising the object , by writing own constructor 
+class Test {
+public:
+    int x;
+    
+    Test(int val) : x(val) {}  // Constructor initializes `x`
+};
+
+int main() {
+    const Test obj(10);  // ✅ Now works, because `x` is initialized
+    cout << obj.x << endl;  // ✅ Allowed
+}
+
+📌 Key Rule:
+A const object must be fully initialized when created.
+
+If a class has no constructor, members remain uninitialized, causing an error when a const object is created.
+To fix this, always use a constructor to initialize all members.
+
+//moddifying const objects with mutable keyword
+so you actually can modify a data member of a const object if the data member is of the type mutable or by using const caste which is unsafe.
+
+
+
+
+
