@@ -17,7 +17,9 @@ class Example
 int Example::x = 5;  //Static variable initialization
 int main()
 {
+
 cout<<"Value of x is "<<Example::x<<endl;
 Example::show();
     return 0;
+    
 }

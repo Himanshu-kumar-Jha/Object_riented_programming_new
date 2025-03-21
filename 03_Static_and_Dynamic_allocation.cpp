@@ -35,10 +35,12 @@ int main(){
     //dynamic allocation of objects
     Nation *India = new Nation ("India" , 2 , 120 , "1.5B", 7 , "Narendra Modi");
     cout<<"Name of the nation is " <<(*India).showNameofNation();
+    delete India;
     //or
     cout<<"Name of the nation is " <<India->showNameofNation();
     //static allocation of objects
     Nation USA("USA" , 5 , 200 , "0.5B", 5 , "Donald Trump");
     cout<<"Name of the nation is " <<USA.showNameofNation();
+    
     return 0;
 }
