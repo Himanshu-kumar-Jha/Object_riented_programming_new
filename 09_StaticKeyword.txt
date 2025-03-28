@@ -1,0 +1,13 @@
+                                               Static keyword
+
+A static data member is shared across all objects of the class.
+
+Stored in global memory (not inside objects).
+Only one copy exists, shared by all instances.
+Can be accessed even without an object.
+
+To access a variable without creating an object .
+If we declare a static method inside a class it can;t access any non static member , and yes we can't use this keyword.
+
+
+

@@ -1,0 +1,11 @@
+                                                 Encapsulation 
+Encapsulation in OOPs (C++)
+Encapsulation is one of the fundamental principles of Object-Oriented Programming (OOP). It is the practice of binding data (variables) and the code (methods) that manipulates the data into a single unit, known as a class. Encapsulation helps in data hiding, ensuring that the internal details of an object are not exposed directly but accessed through controlled mechanisms.
+
+By making all of the data members as private.
+
+Key Points of Encapsulation in C++:
+Data Hiding: Member variables are made private or protected to restrict direct access from outside the class.
+Getter and Setter Methods: Public methods are used to provide controlled access to private data.
+Improved Security: Prevents unintended modifications to data.
+Better Code Maintenance: Changes in internal implementation do not affect external code using the class.

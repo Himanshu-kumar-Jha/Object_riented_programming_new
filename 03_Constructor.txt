@@ -11,6 +11,12 @@ This keyword is a pointer which points to the current address of the object.
 
 
 //copy constructor
+
 copy constructor also exists by default as in built constructor , get called when object is copied .
 It as always passed by rerference , if passed by value copu constructor will me called gain as pass by value creates a copy of the object , which again calls copy constructor so the loop keeps runing , that's why it is important to make a copy constructor by rerference.
+
+The in bulit copy contructor performs shallow copy .
+
+// Shallow and deep copy 
+
 

@@ -1,0 +1,92 @@
+What is the Copy Assignment Operator?
+
+The copy assignment operator (operator=) is used to copy the contents of one object to another after both objects have been created. It is used when assigning one object to another using = operator.
+
+Syntax of Copy Assignment Operator
+
+ClassName& operator=(const ClassName& other);
+
+ClassName& → Returns a reference to the current object (*this).
+const ClassName& → Ensures other is passed as a constant reference (to avoid modifying it).
+operator= → Special function name for assignment.
+
+Basic Questions
+
+1️⃣ What is the difference between a copy constructor and a copy assignment operator?
+
+Copy Constructor: Initializes a new object using an existing object.
+Copy Assignment Operator: Copies values between already existing objects.
+
+2️⃣ When is the copy constructor called?
+
+When an object is created from another object, e.g.,
+
+MyClass obj1;
+MyClass obj2 = obj1;  // Copy constructor is called
+
+3️⃣ When is the copy assignment operator called?
+
+When an existing object is assigned another object, e.g.,
+
+MyClass obj1, obj2;
+obj2 = obj1;  // Copy assignment operator is called
+
+4️⃣ What happens if we don’t define a copy constructor or copy assignment operator?
+
+The compiler provides default versions that perform shallow copies, which may lead to memory issues.
+
+Intermediate Questions
+
+5️⃣ What is the rule of three?
+
+If a class manages dynamic memory, it should define:
+Destructor (to free memory)
+Copy Constructor (for deep copying)
+Copy Assignment Operator (for deep copying in assignment)
+
+6️⃣ What is the rule of five?
+
+In modern C++, it extends the rule of three by adding:
+4. Move Constructor
+5. Move Assignment Operator
+This is needed for efficient memory management using r-value references.
+
+7️⃣ How do you prevent self-assignment in the copy assignment operator?
+
+MyClass& operator=(const MyClass& other) {
+    if (this != &other) { // Prevent self-assignment
+        delete data;
+        data = new int(*(other.data));
+    }
+    return *this;
+}
+Without this check, obj = obj; could delete its own data before copying.
+
+8️⃣ How does std::unique_ptr prevent copy assignment issues?
+
+std::unique_ptr deletes the copy constructor and copy assignment operator, preventing accidental copies.
+
+Advanced Questions
+
+9️⃣ What happens if you don’t implement a deep copy in the copy assignment operator?
+
+The default shallow copy leads to multiple objects pointing to the same memory, causing double deletion or dangling pointers.
+🔟 How do you implement a deep copy in a copy assignment operator?
+
+
+MyClass& operator=(const MyClass& other) {
+    if (this != &other) {
+        delete data; // Free old memory
+        data = new int(*(other.data)); // Allocate new memory and copy value
+    }
+    return *this;
+}
+1️⃣ What is copy elision, and how does it affect copy constructors?
+
+Copy elision is an optimization where the compiler eliminates unnecessary copies, even if a copy constructor is defined.
+Example where copy elision occurs:
+
+MyClass createObject() {
+    return MyClass();
+}
+MyClass obj = createObject(); // No copy constructor call (copy elision)
